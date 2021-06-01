@@ -1,5 +1,11 @@
 import React from 'react'; //Reactを宣言
-import {StyleSheet, SafeAreaView, Text, TouchableOpacity} from 'react-native'; //imoportするものを表記
+import {
+  StyleSheet,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native'; //imoportするものを表記
 
 // import Header from '../components/Header';
 
@@ -7,20 +13,29 @@ import {StyleSheet, SafeAreaView, Text, TouchableOpacity} from 'react-native'; /
 const Screen = () => {
   return (
     <SafeAreaView>
-      <Text style={styles.text}>Counter</Text>
-      <Text>0</Text>
+      <View style={styles.header}>
+        <Text style={styles.text}>Counter</Text>
+      </View>
 
-      <TouchableOpacity>
-        <Text style={styles.button}>+</Text>
-      </TouchableOpacity>
+      <View>
+        <Text>0</Text>
+      </View>
 
-      <TouchableOpacity>
-        <Text style={styles.button}>-</Text>
-      </TouchableOpacity>
+      <View>
+        <TouchableOpacity>
+          <Text style={styles.button}>+</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity>
-        <Text>リセット</Text>
-      </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.button}>-</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <TouchableOpacity>
+          <Text>リセット</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
@@ -30,11 +45,19 @@ const styles = StyleSheet.create({
   safeArea: {
     backgroundColor: 'tomato',
   },
+  header: {
+    padding: 15,
+    backgroundColor: 'skyblue',
+  },
   text: {
-    color: 'black',
+    color: 'white',
+    fontSize: 27,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   button: {
     color: 'black',
+    textAlign: 'center',
   },
 });
 
