@@ -11,8 +11,8 @@ const Screen = () => {
         <Text style={styles.headerText}>Counter</Text>
       </View>
 
-      <View>
-        <Text>0</Text>
+      <View style={styles.counterPart}>
+        <Text style={styles.counterDigit}>0</Text>
       </View>
 
       <View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'tomato',
   },
   header: {
-    padding: 15,
+    padding: 10,
     width: '100%',
     backgroundColor: 'skyblue',
   },
@@ -49,7 +49,18 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 25,
+    marginTop: 30,
+  },
+  counterPart: {
+    paddingTop: 150,
+    paddingBottom: 150,
+    backgroundColor: 'yellow',
+    marginBottom: 50,
+  },
+  counterDigit: {
+    fontWeight: 'bold',
+    fontSize: 100,
+    textAlign: 'center',
   },
   button: {
     color: 'black',
