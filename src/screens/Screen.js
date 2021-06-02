@@ -1,20 +1,14 @@
 import React from 'react'; //Reactを宣言
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native'; //imoportするものを表記
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native'; //imoportするものを表記
 
 // import Header from '../components/Header';
 
 //functional component(arrow関数)
 const Screen = () => {
   return (
-    <SafeAreaView>
+    <View>
       <View style={styles.header}>
-        <Text style={styles.text}>Counter</Text>
+        <Text style={styles.headerText}>Counter</Text>
       </View>
 
       <View>
@@ -36,7 +30,7 @@ const Screen = () => {
           <Text>リセット</Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -47,13 +41,15 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 15,
+    width: '100%',
     backgroundColor: 'skyblue',
   },
-  text: {
+  headerText: {
     color: 'white',
-    fontSize: 27,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
+    marginTop: 25,
   },
   button: {
     color: 'black',
