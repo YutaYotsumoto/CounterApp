@@ -15,13 +15,13 @@ const Screen = () => {
         <Text style={styles.counterDigit}>0</Text>
       </View>
 
-      <View>
-        <TouchableOpacity>
-          <Text style={styles.button}>+</Text>
+      <View style={styles.buttonsPart}>
+        <TouchableOpacity style={styles.buttonBasePlus}>
+          <Text style={styles.buttonPlus}>+</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity>
-          <Text style={styles.button}>-</Text>
+        <TouchableOpacity style={styles.buttonBaseMinus}>
+          <Text style={styles.buttonMinus}>-</Text>
         </TouchableOpacity>
       </View>
 
@@ -62,9 +62,39 @@ const styles = StyleSheet.create({
     fontSize: 100,
     textAlign: 'center',
   },
-  button: {
+  buttonsPart: {
+    flex: 1,
+    flexDirection: 'row-reverse', //子要素を横並び　かつ　並び順(右左)を反対
+    alignItems: 'center', //垂直方向
+    justifyContent: 'space-around', //水平方向
+    width: '100%',
+    marginTop: 50,
+  },
+  buttonBasePlus: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'tomato',
+    borderRadius: 5,
+  },
+  buttonBaseMinus: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'tomato',
+    borderRadius: 5,
+  },
+  buttonPlus: {
+    fontWeight: 'bold',
+    fontSize: 25,
     color: 'black',
     textAlign: 'center',
+    paddingTop: 9,
+  },
+  buttonMinus: {
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: 'black',
+    textAlign: 'center',
+    paddingTop: 9,
   },
 });
 
