@@ -25,9 +25,9 @@ const Screen = () => {
         </TouchableOpacity>
       </View>
 
-      <View>
-        <TouchableOpacity>
-          <Text>リセット</Text>
+      <View style={styles.resetPart}>
+        <TouchableOpacity style={styles.resetButtonBase}>
+          <Text style={styles.resetText}>リセット</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -95,6 +95,26 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     paddingTop: 9,
+  },
+  resetPart: {
+    marginTop: 100,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  resetButtonBase: {
+    width: 100,
+    height: 50,
+    borderRadius: 5,
+    backgroundColor: 'tomato',
+  },
+  resetText: {
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: 'black',
+    textAlign: 'center',
+    paddingTop: 13,
   },
 });
 
