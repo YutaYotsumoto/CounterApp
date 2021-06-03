@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react'; //Reactを宣言
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native'; //imoportするものを表記
 
@@ -7,27 +8,62 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native'; //imoport
 const Screen = () => {
   return (
     <View>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Counter</Text>
+      {/* -- < HeaderPart > --------------------------------------------------------------------------------------------------------------------------*/}
+
+      <View style={{padding: 10, width: '100%'}} backgroundColor="skyblue">
+        <Text style={[styles.text, {color: 'white', marginTop: 30}]}>
+          Counter
+        </Text>
       </View>
 
-      <View style={styles.counterPart}>
-        <Text style={styles.counterDigit}>0</Text>
+      {/* -- < counterPart > -------------------------------------------------------------------------------------------------------------------*/}
+
+      <View
+        style={{
+          paddingTop: 150,
+          paddingBottom: 150,
+          backgroundColor: 'yellow',
+          marginBottom: 50,
+        }}>
+        <Text style={[styles.text, {fontSize: 100}]}>0</Text>
       </View>
 
-      <View style={styles.buttonsPart}>
-        <TouchableOpacity style={styles.buttonBasePlus}>
-          <Text style={styles.buttonPlus}>+</Text>
+      {/* -- < buttonPart > -------------------------------------------------------------------------------------------------------------------------- */}
+
+      <View
+        style={[
+          styles.flexbox,
+          {
+            justifyContent: 'space-around', //justifyContentを　'center' から 'space-around' へ上書き
+            marginTop: 50,
+          },
+        ]}>
+        <TouchableOpacity style={styles.buttonBase}>
+          <Text style={[styles.text, {fontSize: 30, paddingTop: 10}]}>-</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonBaseMinus}>
-          <Text style={styles.buttonMinus}>-</Text>
+        <TouchableOpacity style={styles.buttonBase}>
+          <Text style={[styles.text, {fontSize: 30, paddingTop: 10}]}>+</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.resetPart}>
-        <TouchableOpacity style={styles.resetButtonBase}>
-          <Text style={styles.resetText}>リセット</Text>
+      {/* -- < resetButtonPart > -------------------------------------------------------------------------------------------------------------------------- */}
+
+      <View
+        style={[
+          styles.flexbox,
+          {
+            marginTop: 100,
+          },
+        ]}>
+        <TouchableOpacity
+          style={[
+            styles.buttonBase,
+            {
+              width: 100, //buttonBaseの　widthを60　から 100　へ上書き
+            },
+          ]}>
+          <Text style={[styles.text, {paddingTop: 17}]}>リセット</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -36,85 +72,85 @@ const Screen = () => {
 
 //各要素に対してstyleSheetコンポネントで装飾
 const styles = StyleSheet.create({
-  safeArea: {
-    backgroundColor: 'tomato',
-  },
-  header: {
-    padding: 10,
-    width: '100%',
-    backgroundColor: 'skyblue',
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 25,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 30,
-  },
-  counterPart: {
-    paddingTop: 150,
-    paddingBottom: 150,
-    backgroundColor: 'yellow',
-    marginBottom: 50,
-  },
-  counterDigit: {
-    fontWeight: 'bold',
-    fontSize: 100,
-    textAlign: 'center',
-  },
-  buttonsPart: {
-    flex: 1,
-    flexDirection: 'row-reverse', //子要素を横並び　かつ　並び順(右左)を反対
-    alignItems: 'center', //垂直方向
-    justifyContent: 'space-around', //水平方向
-    width: '100%',
-    marginTop: 50,
-  },
-  buttonBasePlus: {
-    width: 50,
-    height: 50,
+  buttonBase: {
+    width: 60,
+    height: 60,
     backgroundColor: 'tomato',
     borderRadius: 5,
   },
-  buttonBaseMinus: {
-    width: 50,
-    height: 50,
-    backgroundColor: 'tomato',
-    borderRadius: 5,
-  },
-  buttonPlus: {
+  text: {
     fontWeight: 'bold',
-    fontSize: 25,
-    color: 'black',
     textAlign: 'center',
-    paddingTop: 9,
-  },
-  buttonMinus: {
-    fontWeight: 'bold',
-    fontSize: 25,
     color: 'black',
-    textAlign: 'center',
-    paddingTop: 9,
+    fontSize: 25,
   },
-  resetPart: {
-    marginTop: 100,
+
+  flexbox: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  safeArea: {
+    // backgroundColor: 'tomato',
+  },
+
+  header: {
+    // padding: 10,
+    // width: '100%',
+    // backgroundColor: 'skyblue',
+  },
+
+  headerText: {
+    // color: 'white',
+    // fontSize: 25,
+    // fontWeight: 'bold',
+    // textAlign: 'center',
+    // marginTop: 30,
+  },
+
+  counterPart: {
+    // paddingTop: 150,
+    // paddingBottom: 150,
+    // backgroundColor: 'yellow',
+    // marginBottom: 50,
+  },
+
+  counterDigit: {
+    // fontWeight: 'bold',
+    // fontSize: 100,
+    // textAlign: 'center',
+  },
+
+  buttonsPart: {
+    // flex: 1,
+    // flexDirection: 'row', //子要素を横並び　かつ　並び順(右左)を反対
+    // alignItems: 'center', //垂直方向
+    // justifyContent: 'space-around', //水平方向
+    // width: '100%',
+    // marginTop: 50,
+  },
+
+  resetPart: {
+    // marginTop: 100,
+    // flex: 1,
+    // flexDirection: 'row',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+  },
   resetButtonBase: {
-    width: 100,
-    height: 50,
-    borderRadius: 5,
-    backgroundColor: 'tomato',
+    // width: 100,
+    // height: 50,
+    // borderRadius: 5,
+    // backgroundColor: 'tomato',
   },
   resetText: {
-    fontWeight: 'bold',
-    fontSize: 25,
-    color: 'black',
-    textAlign: 'center',
-    paddingTop: 13,
+    // fontWeight: 'bold',
+    // fontSize: 25,
+    // color: 'black',
+    // textAlign: 'center',
+    // paddingTop: 13,
   },
 });
 
