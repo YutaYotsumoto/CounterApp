@@ -7,7 +7,10 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from 'react-native'; //imoportするものを表記
+} from 'react-native'; //imoportするものを表
+
+import PlusButton from '../components/PlusButton';
+import MinusButton from '../components/MinusButton';
 
 //functional component(arrow関数)
 const Screen = () => {
@@ -41,19 +44,14 @@ const Screen = () => {
 
         <View
           style={[
-            styles.flexbox,
+            // styles.flexbox,
             {
-              justifyContent: 'space-around', //justifyContentを　'center' から 'space-around' へ上書き
+              // justifyContent: 'space-around', //justifyContentを　'center' から 'space-around' へ上書き
               // marginTop: 50,
             },
           ]}>
-          <TouchableOpacity style={styles.buttonBase}>
-            <Text style={[styles.text, {fontSize: 30, paddingTop: 10}]}>-</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.buttonBase}>
-            <Text style={[styles.text, {fontSize: 30, paddingTop: 10}]}>+</Text>
-          </TouchableOpacity>
+          <MinusButton text="-" />
+          <PlusButton text="+" />
         </View>
 
         {/* -- < resetButtonPart > -------------------------------------------------------------------------------------------------------------------------- */}
