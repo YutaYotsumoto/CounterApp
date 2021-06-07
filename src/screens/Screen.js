@@ -2,11 +2,11 @@
 import React from 'react'; //Reactを宣言
 import {StyleSheet, SafeAreaView, Text, View} from 'react-native'; //imoportするものを表
 
-import Header from '../components/Header';
-import Counter from '../components/CounterPart';
-import PlusButton from '../components/PlusButton';
-import MinusButton from '../components/MinusButton';
-import ResetButton from '../components/ResetButton';
+import Header from '../components/Header/Header';
+import Counter from '../components/Counter/CounterPart';
+import PlusButton from '../components/CountButton/PlusButton';
+import MinusButton from '../components/CountButton/MinusButton';
+import ResetButton from '../components/ResetButton/ResetButton';
 
 //functional component(arrow関数)
 const Screen = () => {
@@ -20,11 +20,7 @@ const Screen = () => {
         <Counter text="0" />
 
         {/* -- < buttonPart > -------------------------------------------------------------------------------------------------------------------------- */}
-        <View
-          style={[
-            styles.flexbox,
-            {justifyContent: 'space-around', marginTop: 30},
-          ]}>
+        <View style={[styles.flexbox, {marginTop: 30}]}>
           <MinusButton text="-" />
           <PlusButton text="+" />
         </View>
@@ -50,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
 });
 
