@@ -44,11 +44,8 @@ const Screen = () => {
 
         <View
           style={[
-            // styles.flexbox,
-            {
-              // justifyContent: 'space-around', //justifyContentを　'center' から 'space-around' へ上書き
-              // marginTop: 50,
-            },
+            styles.flexbox,
+            {justifyContent: 'space-around', marginTop: 30},
           ]}>
           <MinusButton text="-" />
           <PlusButton text="+" />

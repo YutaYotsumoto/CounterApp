@@ -1,9 +1,9 @@
 import React from 'react';
-// import {Text, TouchableOpacity} from 'react-native';
+// import {StyleSheet} from 'react-native';
 import Button from '../components/Button';
 
 const PlusButton = ({text}) => {
-  return <Button buttonText={text} />;
+  return <Button buttonText={text} buttonColor="tomato" />;
 };
 
 export default PlusButton;

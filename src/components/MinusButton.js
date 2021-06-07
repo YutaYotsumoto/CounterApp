@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../components/Button';
 
 const MinusButton = ({text}) => {
-  return <Button buttonText={text} />;
+  return <Button buttonText={text} buttonColor="skyblue" />;
 };
 
 export default MinusButton;
