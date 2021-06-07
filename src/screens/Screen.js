@@ -1,18 +1,11 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react'; //Reactを宣言
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native'; //imoportするものを表
+import {StyleSheet, SafeAreaView, Text, View} from 'react-native'; //imoportするものを表
 
 import PlusButton from '../components/PlusButton';
 import MinusButton from '../components/MinusButton';
 import ResetButton from '../components/ResetButton';
+import Header from '../components/Header';
 
 //functional component(arrow関数)
 const Screen = () => {
@@ -20,15 +13,8 @@ const Screen = () => {
     <SafeAreaView backgroundColor="skyblue">
       <View backgroundColor="white">
         {/* -- < HeaderPart > --------------------------------------------------------------------------------------------------------------------------*/}
-        <View style={{width: '100%'}} backgroundColor="skyblue">
-          <Text
-            style={[
-              styles.text,
-              {fontSize: 35, color: 'white', marginBottom: 5},
-            ]}>
-            Counter
-          </Text>
-        </View>
+
+        <Header text="Counter" />
 
         {/* -- < counterPart > -------------------------------------------------------------------------------------------------------------------*/}
 
