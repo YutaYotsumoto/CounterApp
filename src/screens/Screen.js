@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react'; //Reactを宣言
-import {StyleSheet, SafeAreaView, Text, View} from 'react-native'; //imoportするものを表
+import {StyleSheet, SafeAreaView, View} from 'react-native'; //imoportするものを表
 
 import Header from '../components/Header/Header';
 import Counter from '../components/Counter/CounterPart';
@@ -26,13 +26,7 @@ const Screen = () => {
         </View>
 
         {/* -- < resetButtonPart > -------------------------------------------------------------------------------------------------------------------------- */}
-        <View
-          style={[
-            styles.flexbox,
-            {
-              marginTop: 100,
-            },
-          ]}>
+        <View style={[styles.flexbox, {marginTop: 100}]}>
           <ResetButton text="reset" />
         </View>
       </View>
