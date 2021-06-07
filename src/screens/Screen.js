@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react'; //Reactを宣言
@@ -11,6 +12,7 @@ import {
 
 import PlusButton from '../components/PlusButton';
 import MinusButton from '../components/MinusButton';
+import ResetButton from '../components/ResetButton';
 
 //functional component(arrow関数)
 const Screen = () => {
@@ -60,15 +62,7 @@ const Screen = () => {
               marginTop: 100,
             },
           ]}>
-          <TouchableOpacity
-            style={[
-              styles.buttonBase,
-              {
-                width: 100, //buttonBaseの　widthを60　から 100　へ上書き
-              },
-            ]}>
-            <Text style={[styles.text, {paddingTop: 17}]}>リセット</Text>
-          </TouchableOpacity>
+          <ResetButton text="reset" />
         </View>
       </View>
     </SafeAreaView>
