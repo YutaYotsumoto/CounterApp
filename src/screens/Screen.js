@@ -2,10 +2,11 @@
 import React from 'react'; //Reactを宣言
 import {StyleSheet, SafeAreaView, Text, View} from 'react-native'; //imoportするものを表
 
+import Header from '../components/Header';
+import Counter from '../components/CounterPart';
 import PlusButton from '../components/PlusButton';
 import MinusButton from '../components/MinusButton';
 import ResetButton from '../components/ResetButton';
-import Header from '../components/Header';
 
 //functional component(arrow関数)
 const Screen = () => {
@@ -13,23 +14,12 @@ const Screen = () => {
     <SafeAreaView backgroundColor="skyblue">
       <View backgroundColor="white">
         {/* -- < HeaderPart > --------------------------------------------------------------------------------------------------------------------------*/}
-
         <Header text="Counter" />
 
         {/* -- < counterPart > -------------------------------------------------------------------------------------------------------------------*/}
-
-        <View
-          style={{
-            paddingTop: 150,
-            paddingBottom: 150,
-            backgroundColor: 'yellow',
-            marginBottom: 50,
-          }}>
-          <Text style={[styles.text, {fontSize: 100}]}>0</Text>
-        </View>
+        <Counter text="0" />
 
         {/* -- < buttonPart > -------------------------------------------------------------------------------------------------------------------------- */}
-
         <View
           style={[
             styles.flexbox,
@@ -40,7 +30,6 @@ const Screen = () => {
         </View>
 
         {/* -- < resetButtonPart > -------------------------------------------------------------------------------------------------------------------------- */}
-
         <View
           style={[
             styles.flexbox,
@@ -57,19 +46,6 @@ const Screen = () => {
 
 //各要素に対してstyleSheetコンポネントで装飾
 const styles = StyleSheet.create({
-  buttonBase: {
-    width: 60,
-    height: 60,
-    backgroundColor: 'tomato',
-    borderRadius: 5,
-  },
-  text: {
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: 'black',
-    fontSize: 25,
-  },
-
   flexbox: {
     flex: 1,
     flexDirection: 'row',
