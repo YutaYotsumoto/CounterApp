@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 
 const Counter = ({text}) => {
   return (
-    <View style={styles.ViewStyle}>
+    <View style={styles.ViewStyle} backgroundColor="yellow">
       <Text style={styles.text}>{text}</Text>
     </View>
   );
@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   ViewStyle: {
     paddingTop: 150,
     paddingBottom: 150,
-    backgroundColor: 'yellow',
     marginBottom: 50,
   },
   text: {
