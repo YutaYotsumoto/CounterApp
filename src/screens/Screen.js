@@ -4,9 +4,9 @@ import {StyleSheet, SafeAreaView, View} from 'react-native'; //imoportするも�
 
 import Header from '../components/Header/Header';
 import Counter from '../components/Counter/CounterPart';
-import PlusButton from '../components/CountButton/PlusButton';
-import MinusButton from '../components/CountButton/MinusButton';
-import ResetButton from '../components/ResetButton/ResetButton';
+import PlusButton from '../components/Button/CountButton/Buttons/PlusButton';
+import MinusButton from '../components/Button/CountButton/Buttons/MinusButton';
+import ResetButton from '../components/Button/ResetButton/ResetButton';
 
 //functional component(arrow関数)
 const Screen = () => {
