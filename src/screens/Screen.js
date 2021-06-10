@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react'; //Reactを宣言
+import React, {useState} from 'react'; //Reactを宣言
 import {StyleSheet, SafeAreaView, View} from 'react-native'; //imoportするものを表
 
 import Header from '../components/Header/Header';
@@ -8,18 +8,22 @@ import PlusButton from '../components/Button/CountButton/Buttons/PlusButton';
 import MinusButton from '../components/Button/CountButton/Buttons/MinusButton';
 import ResetButton from '../components/Button/ResetButton/ResetButton';
 
-//functional component(arrow関数)
+//functional component
 const Screen = () => {
+  const [count, setCount] = useState(0);
+  const countPlus = () => setCount(count + 1);
+  const countMinus = () => setCount(count - 1);
+
   return (
     <SafeAreaView backgroundColor="skyblue">
       <View backgroundColor="white">
         <Header text="Counter" />
 
-        <Counter text="0" />
+        <Counter text={count} />
 
         <View style={[styles.flexbox, {marginTop: 30}]}>
-          <MinusButton text="-" />
-          <PlusButton text="+" />
+          <MinusButton text="-" onClick={countMinus} />
+          <PlusButton text="+" onClick={countPlus} />
         </View>
 
         <View style={[styles.flexbox, {marginTop: 100}]}>
