@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-const ResetButton = ({text}) => {
+const ResetButton = ({text, countReset}) => {
   return (
-    <TouchableOpacity style={styles.buttonBase}>
+    <TouchableOpacity style={styles.buttonBase} onPress={countReset}>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
