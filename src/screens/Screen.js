@@ -32,12 +32,12 @@ const Screen = () => {
 
         <Counter text={count} />
 
-        <View style={[styles.flexbox, {marginTop: 30}]}>
+        <View style={[styles.buttonArea, {marginTop: 25}]}>
           <MinusButton text="-" countMinus={countMinus} />
           <PlusButton text="+" countPlus={countPlus} />
         </View>
 
-        <View style={[styles.flexbox, {marginTop: 100}]}>
+        <View style={{marginTop: 70, alignItems: 'center'}}>
           <ResetButton text="reset" countReset={countReset} />
         </View>
       </View>
@@ -47,7 +47,7 @@ const Screen = () => {
 
 //各要素に対してstyleSheetコンポネントで装飾
 const styles = StyleSheet.create({
-  flexbox: {
+  buttonArea: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
